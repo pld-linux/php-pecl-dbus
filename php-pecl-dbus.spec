@@ -3,7 +3,7 @@
 Summary:	Extension for interaction with DBUS busses
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.1.1
-Release:	3
+Release:	4
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -12,8 +12,9 @@ URL:		http://pecl.php.net/package/DBus
 BuildRequires:	%{php_name}-devel >= 4:5.2.0
 BuildRequires:	dbus-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
-Provides:	php(dbus)
 %{?requires_php_extension}
+Provides:	php(dbus)
+Obsoletes:	php-pecl-dbus < 0.1.1-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
