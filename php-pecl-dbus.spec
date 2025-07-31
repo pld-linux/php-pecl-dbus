@@ -1,14 +1,15 @@
 %define		php_name	php%{?php_suffix}
 %define		modname	dbus
+%define		snap	20250731
 Summary:	Extension for interaction with DBUS busses
 Name:		%{php_name}-pecl-%{modname}
-Version:	0.1.1
-Release:	5
+Version:	0.1.2
+Release:	1.%{snap}.1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	18505c41fb1ca2a2b5024c50c0de719f
-URL:		http://pecl.php.net/package/DBus
+Source0:	https://github.com/derickr/pecl-dbus/archive/master/%{name}-%{version}.tar.gz
+# Source0-md5:	a2e2e90fc8e35a99d4f9200f1c2aaee4
+URL:		https://github.com/derickr/pecl-dbus
 BuildRequires:	%{php_name}-devel >= 4:5.2.0
 BuildRequires:	dbus-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
@@ -23,7 +24,7 @@ also act as a DBUS service.
 
 %prep
 %setup -qc
-mv %{modname}-%{version}/* .
+mv pecl-%{modname}-*/* .
 
 %build
 phpize
