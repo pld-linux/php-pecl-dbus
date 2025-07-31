@@ -7,7 +7,7 @@ Version:	0.1.2
 Release:	1.%{snap}.1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
-Source0:	https://github.com/derickr/pecl-dbus/archive/master/%{name}-%{version}.tar.gz
+Source0:	https://github.com/derickr/pecl-dbus/archive/master/%{modname}-%{version}.tar.gz
 # Source0-md5:	a2e2e90fc8e35a99d4f9200f1c2aaee4
 URL:		https://github.com/derickr/pecl-dbus
 BuildRequires:	%{php_name}-devel >= 4:5.2.0
